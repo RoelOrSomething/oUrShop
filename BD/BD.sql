@@ -13,7 +13,8 @@ CREATE TABLE IF NOT EXISTS PRODUCTOS(
     DESCRIPCION VARCHAR(200) NOT NULL,
     IMAGEN_PATH VARCHAR(50) NOT NULL,
     PRECIO DECIMAL(8,2) NOT NULL,
-    EXISTENCIA INT NOT NULL
+    EXISTENCIA INT NOT NULL,
+    VENTAS INT NOT NULL
 );
 
 CREATE TABLE IF NOT EXISTS PEDIDOS(
@@ -46,47 +47,47 @@ INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXIS
 INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
   VALUES('NKE-000002','H','Nike blanco puro con Velcro',
   'Tenis Nike para hombre blancos de piel. Cuentan una cinta velcro y agujetas.',
-  './imagenes/nike2.jpg', 1060.00, 40
+  './imagenes/nike2.jpg', 1060.00, 40, 0
 );
 
 INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
   VALUES('NKE-000003','H','Nike Negro espacial',
   'Tenis Nike para hombre para correr color negro espacial.',
-  './imagenes/nike3.jpg', 899.99, 40
+  './imagenes/nike3.jpg', 899.99, 40, 0
 );
 
 INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
   VALUES('NKE-000004','H','Nike blanco Orland',
   'Tenis Nike para hombre color blanco. Estilo Orland.',
-  './imagenes/nike4.jpg', 1099.79, 40
+  './imagenes/nike4.jpg', 1099.79, 40, 0
 );
 
 INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
   VALUES('NKE-000005','H','Nike blanco puro',
   'Tenis Nike para hombre blancos de piel. Cuenta con agujetas.',
-  './imagenes/nike5.jpg', 1099.79, 40
+  './imagenes/nike5.jpg', 1099.79, 40, 0
 );
 
 INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
   VALUES('NKE-000006','H','Nike negros con suela.',
   'Tenis Nike para hombre de color negro. Tobillo alto y suela blanca.',
-  './imagenes/nike6.jpg', 1099.79, 40
+  './imagenes/nike6.jpg', 1099.79, 40, 0
 );
 
 INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
   VALUES('NKE-000007','M','Nike lila.',
   'Tenis Nike deportivos para mujer de color lila.',
-  './imagenes/nike7.jpg', 1099.79, 40
+  './imagenes/nike7.jpg', 1099.79, 40, 0
 );
 
 INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
   VALUES('NKE-000008','N','Nike para niñas blanco con rosa.',
   'Tenis Nike deportivos para niña de color blanco con rosa.',
-  './imagenes/nike9.jpg', 1099.79, 40
+  './imagenes/nike9.jpg', 1099.79, 40, 0
 );
 
 INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
   VALUES('NKE-000009','M','Nike lila.',
   'Tenis Nike deportivos para mujer de color lila.',
-  './imagenes/nike8.jpg', 1099.79, 40
+  './imagenes/nike8.jpg', 1099.79, 40, 0
 );
