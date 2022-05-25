@@ -1,23 +1,22 @@
-CREATE TABLE CLIENTES(
+CREATE TABLE IF NOT EXISTS CLIENTES(
     CLIENTE_ID INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     NOMBRE VARCHAR(40) NOT NULL,
     APELLIDO VARCHAR(40) NOT NULL,
-    EMAIL VARCHAR(40) NOT NULL,
-    PW VARCHAR(40) NOT NULL
+    EMAIL VARCHAR(40) NOT NULL
 );
 
-CREATE TABLE PRODUCTOS(
+CREATE TABLE IF NOT EXISTS PRODUCTOS(
     PRODUCTO_ID INT AUTO_INCREMENT PRIMARY KEY,
     SKU VARCHAR(10) NOT NULL,
-    CLASS CHAR NOT NULL,
+    CLASS CHAR(1) NOT NULL,
     NOMBRE VARCHAR(40) NOT NULL,
     DESCRIPCION VARCHAR(200) NOT NULL,
     IMAGEN_PATH VARCHAR(50) NOT NULL,
     PRECIO DECIMAL(8,2) NOT NULL,
-    EXISTENCIA VARCHAR(40) NOT NULL
+    EXISTENCIA INT NOT NULL
 );
 
-CREATE TABLE PEDIDOS(
+CREATE TABLE IF NOT EXISTS PEDIDOS(
     PEDIDO_ID INT AUTO_INCREMENT PRIMARY KEY,
     FOLIO VARCHAR(10) NOT NULL,
     FECHA DATE NOT NULL,
@@ -27,7 +26,7 @@ CREATE TABLE PEDIDOS(
         REFERENCES CLIENTES(CLIENTE_ID)
 );
 
-CREATE TABLE PEDIDO_PRODUCTO(
+CREATE TABLE IF NOT EXISTS PEDIDO_PRODUCTO(
     PEDIDO_PRODUCTO_ID INT AUTO_INCREMENT PRIMARY KEY,
     CANTIDAD INT NOT NULL,
     PEDIDOS_ID INT NOT NULL,
@@ -38,4 +37,56 @@ CREATE TABLE PEDIDO_PRODUCTO(
         REFERENCES PRODUCTOS(PRODUCTO_ID)
 );
 
-INSERT
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000001','H','Nike chocolate y naranja',
+  'Tenis Nike para hombre de color chocolate y naranja de piel GORE-TEX.',
+  './imagenes/nike1.jpg', 1200.00, 40
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000002','H','Nike blanco puro con Velcro',
+  'Tenis Nike para hombre blancos de piel. Cuentan una cinta velcro y agujetas.',
+  './imagenes/nike2.jpg', 1060.00, 40
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000003','H','Nike Negro espacial',
+  'Tenis Nike para hombre para correr color negro espacial.',
+  './imagenes/nike3.jpg', 899.99, 40
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000004','H','Nike blanco Orland',
+  'Tenis Nike para hombre color blanco. Estilo Orland.',
+  './imagenes/nike4.jpg', 1099.79, 40
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000005','H','Nike blanco puro',
+  'Tenis Nike para hombre blancos de piel. Cuenta con agujetas.',
+  './imagenes/nike5.jpg', 1099.79, 40
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000006','H','Nike negros con suela.',
+  'Tenis Nike para hombre de color negro. Tobillo alto y suela blanca.',
+  './imagenes/nike6.jpg', 1099.79, 40
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000007','M','Nike lila.',
+  'Tenis Nike deportivos para mujer de color lila.',
+  './imagenes/nike7.jpg', 1099.79, 40
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000008','N','Nike para niñas blanco con rosa.',
+  'Tenis Nike deportivos para niña de color blanco con rosa.',
+  './imagenes/nike9.jpg', 1099.79, 40
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000009','M','Nike lila.',
+  'Tenis Nike deportivos para mujer de color lila.',
+  './imagenes/nike8.jpg', 1099.79, 40
+);
