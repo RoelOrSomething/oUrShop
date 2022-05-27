@@ -28,38 +28,24 @@
 			</nav>
 		</header>
 
-		<table id="carrusel">	
-		<tr>
-			<td>
-				<div><button onclick="preImg()" class="botonCarr" ><img src="./imagenes/last.png" class="imgCarr"></button></div>
-			</td>
-			<td>
-				<img id="imagen" src="./imagenes/carru1.png" style="width:1000px; height: 400px; float: left;"></img>	
-			</td>
-			<td>	
-				<div><button onclick="nextImg()" class="botonCarr"><img src="./imagenes/next.png" class="imgCarr"></button></div>
-			</td>	
-		</tr>
-		<div id="carrusel">
-					
-    	</div>
-    	</table>
-
 		<?php
 			
-			$productosByVentasTop6 = "SELECT * FROM PRODUCTOS ORDER BY VENTAS LIMIT 6";
-			$mas_vendidos = $conn->query($productosByVentasTop6);
-			
+			$query = "SELECT * FROM PRODUCTOS WHERE CLASS = 'H' ORDER BY VENTAS";
+			$selection = $conn->query($query);
+			$N = mysqli_num_rows($selection);
+			$M = ceil($N / 2);
+
 			echo '<table class="tablaObjetos">';
-			for($i = 0; $i<3; $i++){
+			for($i = 0; $i<$M; $i++){
 				echo '<tr>';
 				for($j = 0; $j<2; $j++){
-					$row = mysqli_fetch_assoc($mas_vendidos);
+					$row = mysqli_fetch_assoc($selection);
 					echo '<td><div class="producto">';
 						echo '<img src="'.$row['IMAGEN_PATH'].'" class="imagenProducto">';
 						echo '<div class="productoInfo">';
 							echo '<p class="descripcion">'.$row["NOMBRE"].'</p>';
-							echo '<p class="precio">'.$row['PRECIO'].'</p>';
+							echo '<p class="precio"> $'.$row['PRECIO'].'</p>';
+							echo '<p>Existencia: '.$row['EXISTENCIA'].' </p>';
 							echo '<p>Cantidad: </p>';
 							echo '<form class="cantidades">';
 								echo '<input type="number" title="num" class="numProducto">';
@@ -67,6 +53,10 @@
 							echo '</form>';
 						echo '</div>';
 					echo '</div></td>';
+					$N = $N - 1;
+					if($N == 0){
+						break;
+					}
 				}
 				echo '</tr>';
 			}

@@ -1,4 +1,4 @@
-let imagenes = ["carru1.png", "carru2.png", "carru3.jpg"]
+let imagenes = ["./imagenes/carru1.png", "./imagenes/carru2.png", "./imagenes/carru3.jpg"]
 let size = imagenes.length;
 let pos = 0;
 
