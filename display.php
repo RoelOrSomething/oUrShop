@@ -11,6 +11,7 @@
                     echo '<img src="'.$row['IMAGEN_PATH'].'" class="imagenProducto">';
                     echo '<div class="productoInfo">';
                         echo '<p class="descripcion">'.$row["NOMBRE"].'</p>';
+                        echo '<p class="sku"> SKU:'.$row["SKU"].' </p>';
                         echo '<p class="precio"> $'.$row['PRECIO'].'</p>';
                         echo '<p>Existencia: '.$row['EXISTENCIA'].' </p>';
                         echo '<p>Cantidad: </p>';
