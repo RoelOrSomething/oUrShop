@@ -9,6 +9,7 @@
 <body>
 	<?php 
 	  include 'db_connection.php';
+	  include 'display.php';
 	  $conn = OpenCon();
 	?>
 
@@ -49,29 +50,7 @@
 			
 			$productosByVentasTop6 = "SELECT * FROM PRODUCTOS ORDER BY VENTAS LIMIT 6";
 			$mas_vendidos = $conn->query($productosByVentasTop6);
-			
-			echo '<table class="tablaObjetos">';
-			for($i = 0; $i<3; $i++){
-				echo '<tr>';
-				for($j = 0; $j<2; $j++){
-					$row = mysqli_fetch_assoc($mas_vendidos);
-					echo '<td><div class="producto">';
-						echo '<img src="'.$row['IMAGEN_PATH'].'" class="imagenProducto">';
-						echo '<div class="productoInfo">';
-							echo '<p class="descripcion">'.$row["NOMBRE"].'</p>';
-							echo '<p class="precio">'.$row['PRECIO'].'</p>';
-							echo '<p>Cantidad: </p>';
-							echo '<form class="cantidades">';
-								echo '<input type="number" title="num" class="numProducto">';
-								echo '<input type="button" name="agregar" value="Agregar" class="botonAgregar" >';
-							echo '</form>';
-						echo '</div>';
-					echo '</div></td>';
-				}
-				echo '</tr>';
-			}
-
-			echo '</table>';
+			displayTable($mas_vendidos);
 
 		?>
 		
