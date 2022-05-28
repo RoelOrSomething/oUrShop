@@ -9,27 +9,16 @@
 <body>
 	<?php 
 	  include 'db_connection.php';
+	  include 'display.php';
 	  $conn = OpenCon();
 	?>
 
 	<div class="contenedor">
 		
-		<header>
-			<nav>
-				<div class="marca_logo">
-					<p>oUrShop<p>
-				</div>
-				<ul>
-					<li><a href="#">Login</a> </li>
-					<li><a href="#">Sing up</a></li>
-					<li><a href="#">Misión y Visión</a></li>
-					<li><a href="#"><img src="./imagenes/carrito.jpg" width="25"></a></li>
-				</ul>
-			</nav>
-		</header>
-
 		<?php
 			
+			displayHeader();
+
 			$query = "SELECT * FROM PRODUCTOS WHERE CLASS = 'C' ORDER BY VENTAS";
 			$selection = $conn->query($query);
 			displayTable($selection);

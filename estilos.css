@@ -58,23 +58,6 @@ header nav ul li a{
 
 }
 
-#carrusel{
-	padding: 	0;
-	margin: 0 auto;
-	
-}
-
-.imgCarr{
-	width: 	30px;
-}
-
-.botonCarr{
-	width: 	30px;
-	background:white;
-	border:none;
-	margin	: 10px;
-}
-
 .tablaObjetos{
 	/*background: #2e294a;*/
 	font-family: Arial;
@@ -150,4 +133,59 @@ header nav ul li a{
 	background: black;
 	color: 	white;
 	padding: 	10px 15px;
+}
+
+.contenedorCintaMenu{
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.cintaMenu{
+	font-family: Arial;
+	
+	width: 90%;
+	height: 35px;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+.cintaMenu table{
+
+	height: 100%;
+	width: 50%;
+	margin: 0 auto;
+}
+
+.cintaMenu table tr td{
+	margin: 10px;
+	background: black;
+}
+
+.cintaMenu table tr td div{
+	width: 200px;
+	text-align: center;
+	color: white;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	margin-right: auto;
+	
+}
+
+#carrusel{
+	padding: 	0;
+	margin: 0 auto;	
+}
+
+.imgCarr{
+	width: 	30px;
+}
+
+.botonCarr{
+	width: 	30px;
+	background:white;
+	border:none;
+	margin	: 10px;
 }
