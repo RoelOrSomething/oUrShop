@@ -26,6 +26,7 @@
 		
 	</div>
 	<script src="carrusel.js"></script>
+	<script src="carrito.js"></script>
 
 	<?php 
 	  CloseCon($conn);

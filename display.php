@@ -9,8 +9,8 @@
                     <p>oUrShop<p>
                 </div>
                 <ul>
-                    <li><a href="#">Misión y Visión</a></li>
-                    <li><a href="#"><img src="./imagenes/carrito.jpg" width="25"></a></li>
+                    <li><a href="./MisionVision.php">Misión y Visión</a></li>
+                    <li><a href="./carrito.php"><img src="./imagenes/carrito.jpg" width="25"></a></li>
                 </ul>
             </nav>
          </header>
@@ -45,8 +45,8 @@
                         <p>Existencia: '.$row['EXISTENCIA'].' </p>
                         <p>Cantidad: </p>
                         <form class="cantidades">
-                            <input type="number" title="num" class="numProducto">
-                            <input type="button" name="agregar" value="Agregar" class="botonAgregar" >
+                            <input id=cantidadP'.$row['PRODUCTO_ID'].' type="number" title="num" class="numProducto">
+                            <input onclick=agregarCarrito('.$row['PRODUCTO_ID'].',cantidadP'.$row[PRODUCTO_ID].'.value) type="button" name="agregar" value="Agregar" class="botonAgregar" >
                         </form>
                     </div>
                 </div></td>';

@@ -14,19 +14,13 @@
 	?>
 
 	<div class="contenedor">
-
+		
 		<?php
-
 			displayHeader();
-
-			$query = "SELECT * FROM PRODUCTOS WHERE CLASS = 'N' ORDER BY VENTAS";
-			$selection = $conn->query($query);
-			displayTable($selection);
-
 		?>
 		
+
 	</div>
-	<script src="carrusel.js"></script>
 	<script src="carrito.js"></script>
 
 	<?php 

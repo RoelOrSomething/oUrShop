@@ -153,7 +153,7 @@ INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXIS
 );
 
 INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
-  VALUES('NKE-000019','C','Calcetines deportivos Nike negros (6)',
+  VALUES('NKE-000019','C','Calcetin deportivo Nike negro (6)',
   'Seis pares de calcetines Nike color negro.',
   './imagenes/nike19.jpg', 399.79, 50
 );

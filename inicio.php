@@ -19,7 +19,6 @@
 			displayHeader();
 		?>
 
-
 		<table id="carrusel">	
 		<tr>
 			<td>
@@ -47,6 +46,7 @@
 		
 	</div>
 	<script src="carrusel.js"></script>
+	<script src="carrito.js"></script>
 
 	<?php 
 	  CloseCon($conn);
