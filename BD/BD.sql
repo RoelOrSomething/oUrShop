@@ -47,19 +47,19 @@ INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXIS
 INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
   VALUES('NKE-000002','H','Nike blanco puro con Velcro',
   'Tenis Nike para hombre blancos de piel. Cuentan una cinta velcro y agujetas.',
-  './imagenes/nike2.jpg', 1060.00, 40
+  './imagenes/nike2.jpg', 1060.00, 30
 );
 
 INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
   VALUES('NKE-000003','H','Nike Negro espacial',
   'Tenis Nike para hombre para correr color negro espacial.',
-  './imagenes/nike3.jpg', 899.99, 40
+  './imagenes/nike3.jpg', 899.99, 20
 );
 
 INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
   VALUES('NKE-000004','H','Nike blanco Orland',
   'Tenis Nike para hombre color blanco. Estilo Orland.',
-  './imagenes/nike4.jpg', 1099.79, 40
+  './imagenes/nike4.jpg', 1099.79, 30
 );
 
 INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
@@ -71,7 +71,7 @@ INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXIS
 INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
   VALUES('NKE-000006','H','Nike negros con suela.',
   'Tenis Nike para hombre de color negro. Tobillo alto y suela blanca.',
-  './imagenes/nike6.jpg', 1099.79, 40
+  './imagenes/nike6.jpg', 1099.79, 45
 );
 
 INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
@@ -81,13 +81,85 @@ INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXIS
 );
 
 INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
-  VALUES('NKE-000008','N','Nike para niñas blanco con rosa.',
+  VALUES('NKE-000008','M','Nike para niñas blanco con rosa.',
   'Tenis Nike deportivos para niña de color blanco con rosa.',
-  './imagenes/nike9.jpg', 1099.79, 40
+  './imagenes/nike9.jpg', 799.79, 15
 );
 
 INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
-  VALUES('NKE-000009','M','Nike lila.',
-  'Tenis Nike deportivos para mujer de color lila.',
-  './imagenes/nike8.jpg', 1099.79, 40
+  VALUES('NKE-000009','M','Nike Jordan Series blancos y rosas.',
+  'Tenis Nike deportivos para mujer Jordan Series.',
+  './imagenes/nike9.jpg', 1299.79, 20
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000010','M','Nike J.J.O.O.',
+  'Tenis Nike edición J.J.O.O. para mujeres.',
+  './imagenes/nike10.jpg', 1399.79, 5
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000011','M','Nike Rosas con soporte.',
+  'Tenis deportivos Nike rosas para mujeres. Cuentan con tecnología de soporte.',
+  './imagenes/nike11.jpg', 1599.79, 15
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000012','M','Nike rosas casuales.',
+  'Tenis Nike casuales color rosa.',
+  './imagenes/nike12.jpg', 899.79, 30
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000013','N','Nike infantiles naranjas.',
+  'Tenis Nike infantiles color naranja.',
+  './imagenes/nike13.jpg', 599.79, 10
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000014','N','Nike infantiles blancos.',
+  'Tenis Nike infantiles blancos.',
+  './imagenes/nike14.jpg', 699.79, 15
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000014','N','Nike infantiles blancos.',
+  'Tenis Nike infantiles blancos.',
+  './imagenes/nike14.jpg', 699.79, 15
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000015','N','Nike infantiles negros y naranja',
+  'Tenis Nike infantiles negros y naranjas con Velcro.',
+  './imagenes/nike15.jpg', 699.79, 10
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000016','N','Nike infantiles gris y rosas.',
+  'Tenis Nike infantiles color gris y rosa.',
+  './imagenes/nike16.jpg', 599.79, 20
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000017','N','Nike infantiles rosas estilo chanclas.',
+  'Chanclas infantiles Nike color rosa.',
+  './imagenes/nike17.jpg', 899.79, 10
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000018','C','Calcetas deportivas Nike (3)',
+  'Tres pares de calcetas Nike. Color rojo, blanco y negro.',
+  './imagenes/nike18.jpg', 299.79, 50
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000019','C','Calcetines deportivos Nike negros (6)',
+  'Seis pares de calcetines Nike color negro.',
+  './imagenes/nike19.jpg', 399.79, 50
+);
+
+INSERT INTO PRODUCTOS(SKU, CLASS, NOMBRE, DESCRIPCION, IMAGEN_PATH, PRECIO, EXISTENCIA)
+  VALUES('NKE-000020','C','Calcetas deportivas Nike blancas (3)',
+  'Tres pares de calcetas Nike Dri-Fit color blanco.',
+  './imagenes/nike20.jpg', 199.79, 50
 );
