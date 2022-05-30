@@ -6,7 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="estilos.css">
 
 </head>
-<body>
+<body onload="mostrarCarrito()">
 	<?php 
 	  include 'db_connection.php';
 	  include 'display.php';
@@ -18,6 +18,14 @@
 		<?php
 			displayHeader();
 		?>
+
+        <div>
+            <H2>Carrito</H2>
+            <table id="tablaCarrito">
+                
+            </table>
+        </div>
+
 		
 
 	</div>
