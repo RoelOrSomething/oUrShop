@@ -20,3 +20,28 @@ function mostrarCarrito(){
     request.send(carritoJSON);
     document.getElementById('tablaCarrito').innerHTML = request.response;
 }
+
+function hacerPedido(){
+    console.log("Hago pedido.");
+    nombre = document.getElementById('nombrePedido').value;
+    apellido = document.getElementById('apellidoPedido').value;
+    email = document.getElementById('emailPedido').value;
+    sessionStorage.setItem("nombre", nombre);
+    sessionStorage.setItem("apellido", apellido);
+    sessionStorage.setItem("email", email);
+    pedidoJSON = JSON.stringify(sessionStorage);
+    console.log(pedidoJSON);
+
+    request= new XMLHttpRequest()
+    request.open("POST", "hacerPedido.php", false);
+    request.setRequestHeader("Content-type", "application/json");
+    request.send(pedidoJSON);
+
+    if (request.response === 200){
+        document.getElementById('resultadoPedido').innerHTML = "Pedido exitoso!";
+    }
+
+    sessionStorage.removeItem("nombre");
+    sessionStorage.removeItem("apellido");
+    sessionStorage.removeItem("email");
+}
