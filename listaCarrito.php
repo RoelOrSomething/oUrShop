@@ -4,13 +4,12 @@
 	include 'display.php';
 	$conn = OpenCon();
 
-		echo '<tr>
-			<td>Nombre</td>
-			<td>Precio unit.</td>
-			<td>Cantidad</td>
-			<td>Precio total</td>
-		</tr>
-		';
+		echo '<tr style="font-size: 20px; margin-bottom: 20px;">
+		<td><div class="titulosCarrito">Nombre</div></td>
+		<td><div class="titulosCarrito">Precio unitario</div></td>
+		<td><div class="titulosCarrito">Cantidad</div></td>
+		<td><div class="titulosCarrito">Precio total</div></td>
+		</tr>';
 
 		$carrito_json = file_get_contents('php://input');
 		$carrito = json_decode($carrito_json,TRUE);
@@ -22,16 +21,21 @@
 			$precioTotPro = $cantidad * $producto['PRECIO'];
 			$precio = $precio + $precioTotPro;
 			echo '<tr>
-				<td>'.$producto['NOMBRE'].'</td>
-				<td>'.$producto['PRECIO'].'</td>
-				<td>'.$cantidad.'</td>
-				<td>'.$precioTotPro.'</td>
+				<td><div style="font-weight: bold;" class="celdaCarrito">'.$producto['NOMBRE'].'</div></td>
+				<td><div class="celdaCarrito">$'.$producto['PRECIO'].'</div></td>
+				<td><div class="celdaCarrito">'.$cantidad.'</div></td>
+				<td><div class="celdaCarrito">$'.$precioTotPro.'</div></td>
 			</tr>';
 		}
 
-		echo '<tr>
-			Precio Total:'.$precio.'
+		echo '
+		<tr><td></td><td></td>
+				<td>
+				<div style="font-weight:bold; margin-bottom: 20px;">Precio total del carrito</div>
+				</td>
+				<td ><div style="font-weight:bold; margin-left: 30px;; width: 200px; margin-bottom: 20px;">$'.$precio.'</div></td>
 		</tr>';
+		
 
 	CloseCon($conn);
 ?>

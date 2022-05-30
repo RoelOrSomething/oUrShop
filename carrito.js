@@ -18,7 +18,8 @@ function mostrarCarrito(){
     request.open("POST", "listaCarrito.php", false);
     request.setRequestHeader("Content-type", "application/json");
     request.send(carritoJSON);
-    document.getElementById('tablaCarrito').innerHTML = request.response;
+    document.getElementById('listarCarrito').innerHTML = request.response;
+    console.log(request.response);
 }
 
 function hacerPedido(){
@@ -37,8 +38,10 @@ function hacerPedido(){
     request.setRequestHeader("Content-type", "application/json");
     request.send(pedidoJSON);
 
-    if (request.response === 200){
-        document.getElementById('resultadoPedido').innerHTML = "Pedido exitoso!";
+    if (request.status === 200){
+        console.log("Pedido Exitoso");
+        document.getElementById('pedido').innerHTML = "<p>¡Pedido exitoso!</p>";        
+        sessionStorage.clear();
     }
 
     sessionStorage.removeItem("nombre");

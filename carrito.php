@@ -19,13 +19,17 @@
 			displayHeader();
 		?>
 
-		<H2> Carrito de compras</H2>
+		<div class="contenedorTablaCarrito">
+		<div style="width: 60%; margin: 0 auto; margin-top: 10px; margin-bottom: 20px; font-size: 30px;">Tu carrito:</div>
+		<table id="listarCarrito" class="tablaCarrito">
+			
 
-        <div>
-            
-            <table id="tablaCarrito">
-                
-            </table>
+		</table>
+		</div>
+
+
+
+        <div>     
 
 			<form>
 				<label for="nombre">Nombre:</label>
@@ -40,10 +44,11 @@
 				<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
 				<label for="vehicle1">Quiero actualizaciones</label><br>
 
-				<input onclick="hacerPedido()" type="button" value="Hacer pedido">
 			</form>
 
-			<p id="resultadoPedido"> </p>
+			<div id="pedido">
+				<input onclick="hacerPedido()" type="button" value="Hacer pedido">
+			</div>
 
 
         </div>

@@ -189,3 +189,59 @@ header nav ul li a{
 	border:none;
 	margin	: 10px;
 }
+
+.contenedorMision{
+	
+	width: 100%;
+	
+	float: left;
+	font-family: Verdana;
+}
+
+.textosMision{
+	width: 70%;
+	height: 50px;
+	
+	margin: 0 auto;
+	font-size: 30px;
+}
+
+.tex{
+	width: 70%;
+	
+	margin: 0 auto;
+	font-size: 18px;
+}
+
+
+.contenedorTablaCarrito{
+	float: left;
+	
+	width: 100%;
+	height: 100%;
+	font-family: sans-serif;
+}
+
+.tablaCarrito{
+	margin: 0 auto;
+	background: whitesmoke;
+	width: 60%;
+}
+
+.titulosCarrito{
+	width: 150px;
+	margin-top: 30px;
+	margin-bottom: 10px;
+	margin-left: 30px;
+	font-weight: bold;
+	
+}
+
+.celdaCarrito{
+	height: 70px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 30px;
+	width: 150px;
+
+}

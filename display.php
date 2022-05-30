@@ -9,7 +9,7 @@
                     <p>oUrShop<p>
                 </div>
                 <ul>
-                    <li><a href="./MisionVision.php">Misión y Visión</a></li>
+                    <li><a href="./mision_vision.php">Misión y Visión</a></li>
                     <li><a href="./carrito.php"><img src="./imagenes/carrito.jpg" width="25"></a></li>
                 </ul>
             </nav>

@@ -38,7 +38,7 @@
 
 		<?php
 			
-			$productosByVentasTop6 = "SELECT * FROM PRODUCTOS ORDER BY VENTAS LIMIT 6";
+			$productosByVentasTop6 = "SELECT * FROM PRODUCTOS ORDER BY VENTAS DESC LIMIT 6";
 			$mas_vendidos = $conn->query($productosByVentasTop6);
 			displayTable($mas_vendidos);
 
