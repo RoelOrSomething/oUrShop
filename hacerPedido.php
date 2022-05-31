@@ -51,14 +51,11 @@
     $insert = "INSERT INTO CLIENTES(NOMBRE, APELLIDO, EMAIL)
         VALUES('".$nombre."','".$apellido."','".$email."')";
     
-    if($conn->query($insert) === TRUE){
-        echo "Cool";
-    }else{
-        echo "Not Cool";
-    }
+    $conn->query($insert);
 
     // Se calcula el folio [FECHA,PEDIDO_ID]
     $folio = date("ymd").str_pad($id_pedido,4,"0",STR_PAD_LEFT);
+    echo $folio;
 
     // Se inserta el pedido a la tabla PEDIDOS
     $insert = "INSERT INTO PEDIDOS(FOLIO, FECHA, COSTO, CLIENTE_ID)
@@ -83,7 +80,7 @@
               EXISTENCIA = ".$existencia.", 
               VENTAS = ".$ventas."
             WHERE PRODUCTO_ID = ".$id;
-        echo $insert;
+
         $conn->query($insert);
 
         $conn->query($insert);

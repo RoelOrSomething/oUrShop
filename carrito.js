@@ -40,7 +40,12 @@ function hacerPedido(){
 
     if (request.status === 200){
         console.log("Pedido Exitoso");
-        document.getElementById('pedido').innerHTML = "<p>¡Pedido exitoso!</p>";        
+        document.getElementById('datosPedido').innerHTML = "Datos del pedido";
+        document.getElementById('datoNombre').innerHTML = "<p>"+nombre+"</p>";  
+        document.getElementById('datoApellido').innerHTML = "<p>"+apellido+"</p>";  
+        document.getElementById('datoEmail').innerHTML = "<p>"+email+"</p>";    
+        document.getElementById('updates').innerHTML = "";    
+        document.getElementById('pedido').innerHTML = "<p>¡Pedido exitoso! Folio: "+request.response+"</p>";        
         sessionStorage.clear();
     }
 

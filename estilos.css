@@ -245,3 +245,46 @@ header nav ul li a{
 	width: 150px;
 
 }
+
+.contenedorFormulario{
+	float: left;
+	
+	width: 100%;
+	margin-top: 60px;
+	font-family: sans-serif;
+}
+
+
+.datos{
+	
+	width: 60%;
+	height: 500px;
+	margin: 0 auto;
+}
+
+.formulario{
+	margin: 0 auto;
+	width: 90%;
+	height: 300px;
+	margin-top: 30px;
+}
+.compFormulario{
+	width: 350px;
+	height: 40px;
+	margin-top: 10px;
+}
+
+.compFormulario label{
+	float: left;
+}
+
+.compFormulario input{
+	float: right;
+	width: 75%;
+}
+
+#pedido{
+	width: 350px;
+	height: 50px;
+	align-content: center;
+}

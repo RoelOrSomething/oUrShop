@@ -29,26 +29,39 @@
 
 
 
-        <div>     
+        <div class="contenedorFormulario">
+			
+			<div id="datosPedido" style="width: 60%; height: 50px; margin: 0 auto; margin-top: 20px; margin-bottom: 20px; font-size: 30px;">Ingresa tus datos:</div>
+			<div class="datos">
+			<form class="formulario">
 
-			<form>
-				<label for="nombre">Nombre:</label>
-				<input type="text" id="nombrePedido" name="nombre"><br>
+				<div class="compFormulario">
+					<label for="nombre">Nombre:</label>
+					<div id="datoNombre"><input type="text" id="nombrePedido" name="nombre"><br></div>
+				</div>
 
-				<label for="apellido">Apellido:</label>
-				<input type="text" id="apellidoPedido" name="apellido"><br>
+				<div class="compFormulario">
+					<label for="apellido">Apellido:</label>
+					<div id="datoApellido"><input type="text" id="apellidoPedido" name="apellido"><br></div>
+				</div class="compFormulario">
 
-				<label for="email">Email:</label>
-				<input type="text" id="emailPedido" name="email"><br>
+				<div class="compFormulario">
+					<label for="email">Email:</label>
+					<div id="datoEmail"><input type="text" id="emailPedido" name="email"><br></div>
+				</div>
 
-				<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
-				<label for="vehicle1">Quiero actualizaciones</label><br>
+				<div id="updates" style="width: 50%;height: 40px; margin-top: 10px;">
+					<input type="checkbox" id="actualizaciones" name="actualizaciones" value="Bike">
+					<label for="actualizaciones">Quiero actualizaciones</label><br>
+				</div>
+
+				<div id="pedido">
+				<input onclick="hacerPedido()" type="button" value="Hacer pedido">
+				</div>
 
 			</form>
-
-			<div id="pedido">
-				<input onclick="hacerPedido()" type="button" value="Hacer pedido">
 			</div>
+
 
 
         </div>
